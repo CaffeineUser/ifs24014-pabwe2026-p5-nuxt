@@ -22,7 +22,7 @@ describe('apiHelper', () => {
   })
 
   describe('buildUrl', () => {
-    it('menggabungkan base url dan query, mengabaikan nilai kosong', () => {
+    it('menghapus trailing slash base URL, menggabungkan query, dan mengabaikan nilai kosong', () => {
       expect(buildUrl('/a')).toBe('https://open-api.delcom.org/api/v1/a')
       expect(buildUrl('/a', { x: 1, y: '', z: undefined, w: null, v: 'ok' })).toBe(
         'https://open-api.delcom.org/api/v1/a?x=1&v=ok',

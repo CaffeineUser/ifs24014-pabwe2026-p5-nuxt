@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   define: {
-    DELCOM_BASEURL: JSON.stringify('https://open-api.delcom.org/api/v1'),
+    DELCOM_BASEURL: JSON.stringify('https://open-api.delcom.org/api/v1/'),
   },
   test: {
     environment: 'jsdom',
